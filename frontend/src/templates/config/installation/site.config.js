@@ -1,55 +1,55 @@
 module.exports = {
   devEnv: 'true' === process.env.WEBPACK_DEV_SERVER,
-  id: process.env.MEDIACMS_ID || 'mediacms-frontend',
-  title: process.env.MEDIACMS_TITLE || 'MediaCMS Demo',
+  id: process.env.MEDIACMS_ID || 'nowarfy-media',
+  title: process.env.MEDIACMS_TITLE || 'Nowarfy',
   url: process.env.MEDIACMS_URL || 'UNDEFINED_URL',
   api: process.env.MEDIACMS_API || 'UNDEFINED_API',
   useRoundedCorners: true,
   version: '1.0.0',
   theme: {
-    mode: 'light', // Valid values: 'light', 'dark'.
+    mode: 'dark', // Valid values: 'light', 'dark'.
     switch: {
       position: 'sidebar', // Valid values: 'header', 'sidebar'.
     },
   },
   logo: {
     lightMode: {
-      svg: './static/images/logo_dark.svg',
-      img: './static/images/logo_dark.png',
+      svg: '',
+      img: './static/images/youtoo-mark-compact.png',
     },
     darkMode: {
-      svg: './static/images/logo_light.svg',
-      img: './static/images/logo_light.png',
+      svg: '',
+      img: './static/images/youtoo-mark-compact.png',
     },
   },
   pages: {
     latest: {
-      title: 'Recent uploads',
+      title: 'Últimas incorporaciones',
     },
     featured: {
-      title: 'Featured',
+      title: 'Destacados',
     },
     recommended: {
-      title: 'Recommended',
+      title: 'Para seguir explorando',
     },
     members: {
-      title: 'Members',
+      title: 'Comunidad',
     },
   },
   userPages: {
     liked: {
-      title: 'Liked media',
+      title: 'Favoritos',
     },
     history: {
-      title: 'History',
+      title: 'Historial',
     },
   },
   taxonomies: {
     tags: {
-      title: 'Tags',
+      title: 'Etiquetas',
     },
     categories: {
-      title: 'Categories',
+      title: 'Categorías',
     },
   },
 };

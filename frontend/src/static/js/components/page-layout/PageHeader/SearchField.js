@@ -5,6 +5,7 @@ import { PageStore, SearchFieldStore } from '../../../utils/stores/';
 import { SearchFieldActions } from '../../../utils/actions/';
 import { MaterialIcon, PopupMain } from '../../_shared';
 import { translateString } from '../../../utils/helpers/';
+import { recordLocalSearch } from '../../../utils/youtoo/localProfile';
 
 import './SearchField.scss';
 
@@ -162,6 +163,7 @@ export function SearchField(props) {
   }
 
   function onPredictionSelect(val) {
+    recordLocalSearch(val);
     setPredictionItems([]);
     setQueryVal(val);
 
@@ -248,10 +250,13 @@ export function SearchField(props) {
   }
 
   function onFormSubmit(ev) {
-    if ('' === searchInputRef.current.value.trim()) {
+    const query = searchInputRef.current.value.trim();
+    if ('' === query) {
       ev.preventDefault();
       ev.stopPropagation();
+      return;
     }
+    recordLocalSearch(query);
   }
 
   function onPopupHide() {

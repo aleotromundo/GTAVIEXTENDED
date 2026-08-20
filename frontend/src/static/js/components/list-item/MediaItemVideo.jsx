@@ -6,6 +6,7 @@ import { MediaDurationInfo } from '../../utils/classes/';
 import { MediaPlaylistOptions } from '../media-playlist-options/MediaPlaylistOptions.jsx';
 import { MediaItemVideoPlayer, MediaItemDuration, MediaItemVideoPreviewer, MediaItemPlaylistIndex, itemClassname } from './includes/items/';
 import { MediaItem } from './MediaItem';
+import { YouTooQueueButton } from '../youtoo/YouTooFloatingPlayer';
 
 export function MediaItemVideo(props) {
   const type = props.type;
@@ -147,6 +148,7 @@ export function MediaItemVideo(props) {
 
         {!isSelectMediaMode && editMediaComponent()}
         {!isSelectMediaMode && viewMediaComponent()}
+        {!isSelectMediaMode && props.queueItem ? <YouTooQueueButton item={props.queueItem} /> : null}
 
         {props.hasMediaViewer ? videoViewerComponent() : thumbnailComponent()}
 

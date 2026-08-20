@@ -218,6 +218,17 @@ export function listItemProps(props, item, index) {
 
   if ('video' === type || 'audio' === type) {
     args.duration = item.duration;
+    args.queueItem = {
+      source: 'mediacms',
+      sourceKey: item.friendly_token || item.api_url || item.url,
+      apiUrl: item.api_url || '',
+      link: url.view,
+      title: title || 'Sin título',
+      artist: author.name || 'Biblioteca YouToo',
+      thumbnail,
+      mediaType: type,
+      duration: item.duration || 0,
+    };
   }
 
   if ((isArchiveItem || isPlaylistItem) && !isNaN(item.media_count)) {
@@ -253,6 +264,7 @@ export function ListItem(props) {
     singleLinkContent: props.singleLinkContent,
     hasMediaViewer: props.hasMediaViewer,
     hasMediaViewerDescr: props.hasMediaViewerDescr,
+    queueItem: props.queueItem,
     showSelection: props.showSelection,
     hasAnySelection: props.hasAnySelection,
     isSelected: props.isSelected,

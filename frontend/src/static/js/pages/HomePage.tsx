@@ -13,16 +13,34 @@ const EmptyMedia: React.FC = ({}) => {
     <LinksConsumer>
       {(links) => (
         <div className="empty-media">
-          <div className="welcome-title">Welcome to MediaCMS!</div>
-          <div className="start-uploading">Start uploading media and sharing your work!</div>
-          <a href={links.user.addMedia} title="Upload media" className="button-link">
-            <i className="material-icons" data-icon="video_call"></i>UPLOAD MEDIA
+          <div className="welcome-title">Tu biblioteca está lista para empezar.</div>
+          <div className="start-uploading">Sumá tu primer video, canción o archivo de audio para convertir este espacio en tu catálogo audiovisual.</div>
+          <a href={links.user.addMedia} title="Agregar a la biblioteca" className="button-link">
+            <i className="material-icons" data-icon="video_call"></i>AGREGAR A LA BIBLIOTECA
           </a>
         </div>
       )}
     </LinksConsumer>
   );
 };
+
+const YouTooHero: React.FC = () => (
+  <section className="youtoo-hero" aria-label="Nowarfy">
+    <div className="youtoo-hero__eyebrow">Nowarfy <span>· YouToo, experiencia audiovisual</span></div>
+    <h1 className="youtoo-hero__title">
+      Todo lo que querés ver y escuchar. <span>En un mismo lugar.</span>
+    </h1>
+    <p className="youtoo-hero__copy">
+      Biblioteca propia, video y audio organizados para descubrir, guardar y continuar tu reproducción sin salir de la experiencia.
+    </p>
+    <div className="youtoo-hero__chips" aria-label="Capacidades de Nowarfy">
+      <span>Biblioteca viva</span>
+      <span>Cola persistente</span>
+      <span>Canales y listas</span>
+      <span>Audio continuo</span>
+    </div>
+  </section>
+);
 
 interface HomePageProps {
   id?: string;
@@ -71,6 +89,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <ApiUrlConsumer>
             {(apiUrl) => (
               <MediaMultiListWrapper className="items-list-ver">
+                <YouTooHero />
                 {PageStore.get('config-enabled').pages.featured &&
                   PageStore.get('config-enabled').pages.featured.enabled && (
                     <MediaListRow

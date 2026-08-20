@@ -1,7 +1,13 @@
 import os
 
 FRONTEND_HOST = os.getenv('FRONTEND_HOST', 'http://localhost')
-PORTAL_NAME = os.getenv('PORTAL_NAME', 'MediaCMS')
+PORTAL_NAME = os.getenv('PORTAL_NAME', 'Nowarfy')
+PORTAL_DESCRIPTION = os.getenv('PORTAL_DESCRIPTION', 'YouToo · experiencia audiovisual de Nowarfy')
+DEFAULT_THEME = 'dark'
+PORTAL_LOGO_DARK_SVG = ''
+PORTAL_LOGO_LIGHT_SVG = ''
+PORTAL_LOGO_DARK_PNG = '/static/images/youtoo-mark-compact.png'
+PORTAL_LOGO_LIGHT_PNG = '/static/images/youtoo-mark-compact.png'
 REDIS_LOCATION = os.getenv('REDIS_LOCATION', 'redis://redis:6379/1')
 
 DATABASES = {

@@ -4,8 +4,8 @@ module.exports = {
       { charset: 'utf-8' },
       { content: 'ie=edge', 'http-equiv': 'x-ua-compatible' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'theme-color', content: '#fafafa' },
-      { name: 'msapplication-TileColor', content: '#fafafa' },
+      { name: 'theme-color', content: '#0a0a12' },
+      { name: 'msapplication-TileColor', content: '#0a0a12' },
       { name: 'msapplication-config', content: 'favicons/browserconfig.xml' },
     ],
     links: [
@@ -38,7 +38,7 @@ module.exports = {
     scripts: [],
   },
   body: {
-    scripts: [],
+    scripts: [{ src: 'static/youtoo-pwa.js', defer: true }],
     snippet: '',
   },
 };

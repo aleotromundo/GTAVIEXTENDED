@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LayoutProvider } from './contexts/LayoutContext';
 import { UserProvider } from './contexts/UserContext';
+import { YouTooPlayerProvider } from './youtoo/YouTooPlayerContext';
+import { YouTooFloatingPlayer } from '../components/youtoo/YouTooFloatingPlayer';
 import { inEmbeddedApp } from './helpers';
 
 const AppProviders = ({ children }) => (
     <LayoutProvider>
         <ThemeProvider>
-            <UserProvider>{children}</UserProvider>
+            <UserProvider>
+                <YouTooPlayerProvider>
+                    {children}
+                    <YouTooFloatingPlayer />
+                </YouTooPlayerProvider>
+            </UserProvider>
         </ThemeProvider>
     </LayoutProvider>
 );
