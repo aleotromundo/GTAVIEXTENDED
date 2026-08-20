@@ -123,6 +123,22 @@ export function YouTooFloatingPlayer() {
     navigator.mediaSession.setActionHandler('nexttrack', next);
   }, [next, previous]);
 
+  useEffect(() => {
+    const onCommand = (event) => {
+      const action = event?.detail?.action;
+      if (action === 'queue') {
+        setCollapsed(false);
+        setQueueOpen(true);
+      }
+      if (action === 'player') {
+        setCollapsed(false);
+      }
+    };
+
+    window.addEventListener('nowarfy:command', onCommand);
+    return () => window.removeEventListener('nowarfy:command', onCommand);
+  }, [setCollapsed]);
+
   const togglePlayback = () => {
     const media = mediaRef.current;
     if (!media || !activeItem || !activeItem.playableUrl) return;

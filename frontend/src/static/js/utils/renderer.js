@@ -5,6 +5,7 @@ import { LayoutProvider } from './contexts/LayoutContext';
 import { UserProvider } from './contexts/UserContext';
 import { YouTooPlayerProvider } from './youtoo/YouTooPlayerContext';
 import { YouTooFloatingPlayer } from '../components/youtoo/YouTooFloatingPlayer';
+import { NowarfyLocalProfilePanel } from '../components/youtoo/NowarfyLocalProfilePanel';
 import { inEmbeddedApp } from './helpers';
 
 const AppProviders = ({ children }) => (
@@ -14,6 +15,7 @@ const AppProviders = ({ children }) => (
                 <YouTooPlayerProvider>
                     {children}
                     <YouTooFloatingPlayer />
+                    <NowarfyLocalProfilePanel />
                 </YouTooPlayerProvider>
             </UserProvider>
         </ThemeProvider>
