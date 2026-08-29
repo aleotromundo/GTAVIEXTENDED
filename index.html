@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070711">
+  <meta name="description" content="Grand Theft Auto VI — An Extended Look. Fuente oficial de Rockstar Games.">
+  <title>Grand Theft Auto VI — An Extended Look</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070711;--text:#f8f3ec;--muted:#bdb5c1;--pink:#fa83c8;--cyan:#70dbff;--yellow:#f5ce6b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+    .page{min-height:100vh;padding:20px 18px 28px;overflow:hidden;background:radial-gradient(circle at 76% 25%,rgba(244,116,181,.3),transparent 28%),radial-gradient(circle at 15% 75%,rgba(47,179,222,.18),transparent 27%),linear-gradient(145deg,#0a0717,#17122e 54%,#080811);position:relative;isolation:isolate}
+    .page:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.23;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(#000,transparent 80%)}
+    .wrap{width:min(1180px,100%);margin:auto}.top{display:flex;justify-content:space-between;align-items:center;margin:0 auto 24px;color:var(--muted);font-size:10px;letter-spacing:.23em;text-transform:uppercase}.signal{display:flex;align-items:center;gap:9px}.signal:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 16px var(--yellow)}.top a,.foot a{color:inherit;text-decoration:none}.top a:hover,.foot a:hover{color:var(--text)}
+    .stage{perspective:1500px}.screen{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(255,255,255,.24);border-radius:19px;background:#020207;box-shadow:0 35px 100px rgba(0,0,0,.58),0 0 0 8px rgba(255,255,255,.025),0 0 100px rgba(112,219,255,.12);transform:rotateX(2deg) rotateY(-1.5deg);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s ease}.screen:hover{transform:rotateX(0) rotateY(0) translateY(-3px);box-shadow:0 42px 110px rgba(0,0,0,.64),0 0 0 8px rgba(255,255,255,.025),0 0 110px rgba(250,131,200,.16)}iframe{display:block;width:100%;height:100%;border:0}.tools{position:absolute;right:15px;bottom:15px;z-index:2;opacity:0;transform:translateY(8px);transition:.2s ease}.screen:hover .tools,.screen:focus-within .tools{opacity:1;transform:none}.expand{display:flex;align-items:center;gap:8px;min-height:36px;padding:0 13px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(9,7,17,.84);backdrop-filter:blur(12px);color:var(--text);font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.expand:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+    .caption{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:20px}.caption h1{margin:0;font:400 clamp(1.55rem,3vw,2.7rem)/1.05 Georgia,"Times New Roman",serif;letter-spacing:-.045em}.caption em{color:var(--pink)}.caption p{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.55}.chips{display:flex;gap:8px;flex:none}.chip{padding:8px 11px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:var(--muted);font-size:10px;letter-spacing:.11em;text-transform:uppercase}.foot{display:flex;justify-content:space-between;gap:20px;margin-top:27px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);color:rgba(189,181,193,.68);font-size:10px;line-height:1.5}.foot p{margin:0;max-width:700px}
+    @media(max-width:720px){.page{padding:18px 12px 22px}.top{margin-bottom:30px}.top a{display:none}.screen{border-radius:12px;transform:none}.tools{opacity:1;transform:none;right:9px;bottom:9px}.caption{align-items:flex-start;flex-direction:column;gap:13px}.caption h1{font-size:1.8rem}.foot{align-items:flex-start;flex-direction:column;gap:9px}.chip{padding:7px 9px}}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}.screen,.screen:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <main class="page"><div class="wrap">
+    <header class="top"><span class="signal">Now playing</span><a href="https://www.rockstargames.com/videos/rk721912" target="_blank" rel="noreferrer">Fuente oficial ↗</a></header>
+    <section class="stage" aria-label="Video oficial"><div class="screen" id="screen" tabindex="-1"><iframe src="https://www.rockstargames.com/videos/rk721912?embed=1" title="Grand Theft Auto VI: An Extended Look — fuente oficial de Rockstar Games" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="tools"><button class="expand" id="expand" type="button" aria-label="Ampliar video">⛶ Ampliar</button></div></div></section>
+    <section class="caption"><div><h1>Grand Theft Auto VI: <em>An Extended Look</em></h1><p>Una mirada extendida a la próxima evolución de la saga, capturada íntegramente en PlayStation 5.</p></div><div class="chips"><span class="chip">26 min</span><span class="chip">HD</span></div></section>
+    <footer class="foot"><p>Proyecto de fans, sin afiliación ni respaldo de Rockstar Games o Take-Two Interactive. Esta página no añade publicidad propia ni altera las condiciones del reproductor oficial.</p><a href="https://www.rockstargames.com/videos/rk721912" target="_blank" rel="noreferrer">Abrir fuente ↗</a></footer>
+  </div></main>
+  <script>document.getElementById('expand').addEventListener('click',async()=>{const s=document.getElementById('screen');try{if(document.fullscreenElement){await document.exitFullscreen()}else{await s.requestFullscreen()}}catch(e){console.warn('Fullscreen unavailable',e)}});</script>
+</body>
+</html>
